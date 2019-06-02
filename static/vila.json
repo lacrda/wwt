@@ -1,0 +1,20 @@
+{"results":
+ [{"address_components":
+  [{"long_name": "Vila Isabel", "short_name": "Vila Isabel", "types": 
+  ["political", "sublocality", "sublocality_level_1"]}, 
+  {"long_name": "Rio de Janeiro", "short_name": "Rio de Janeiro",
+   "types": ["administrative_area_level_2", "political"]},
+    {"long_name": "State of Rio de Janeiro", "short_name": "RJ",
+     "types": ["administrative_area_level_1", "political"]}, 
+     {"long_name": "Brazil", "short_name": "BR", "types": ["country", "political"]}],
+      "formatted_address": "Vila Isabel, Rio de Janeiro - State of Rio de Janeiro, Brazil", 
+      "geometry":
+       {"bounds": 
+       	{"northeast": {"lat": -22.9072599, "lng": -43.2346795},
+       	 "southwest": {"lat": -22.9240679, "lng": -43.2629986}},
+       	 "location": {"lat": -22.9165994, "lng": -43.2501796},
+       	 "location_type": "APPROXIMATE", "viewport":
+       	  {"northeast": {"lat": -22.9072599, "lng": -43.2346795},
+       	   "southwest": {"lat": -22.9240679, "lng": -43.2629986}}},
+       	   
+       	    "place_id": "ChIJ1RRwA3d-mQARmorR5uNG3K4", "types": ["political", "sublocality", "sublocality_level_1"]}], "status": "OK"}

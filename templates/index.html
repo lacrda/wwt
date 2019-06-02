@@ -1,0 +1,63 @@
+<DOCTYPE html>
+<html>
+  <head>
+    <title>WW Toni</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+        width: 80%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <div>
+      <h4>lacerda: 3 territórios</h4>
+      <h4>arthur: 3 territórios</h4>
+      <h4>lacerda: 3 territórios</h4>
+      <h4>lacerda: 3 territórios</h4>
+      <h4>lacerda: 3 territórios</h4>
+    </div>
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -22.914774,  lng: -43.249742},
+          zoom: 15
+        });
+      // Define the LatLng coordinates for the polygon's path.
+        var triangleCoords = [
+          {lat: -22.911, lng:  -43.237},
+          {lat: -22.914, lng:  -43.234},
+          {lat: -22.918, lng:  -43.243},
+          {lat: -22.920, lng:  -43.260},
+          {lat: -22.915, lng:  -43.262},
+          {lat: -22.910, lng:  -43.258}
+        ];
+
+
+        // Construct the polygon.
+        var bermudaTriangle = new google.maps.Polygon({
+          paths: triangleCoords,
+          strokeColor: 'blue',
+          strokeOpacity: 0.2,
+          strokeWeight: 2,
+          fillColor: 'gray',
+          fillOpacity: 0.3
+        });
+        bermudaTriangle.setMap(map);
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKcYQ2LlOZYPn8C42rUYRE4T_y9OZrGpM&callback=initMap" async defer></script>
+  </body>
+</html>
