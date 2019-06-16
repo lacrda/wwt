@@ -1,0 +1,196 @@
+@media (min-width: 768px){
+@media (min-width: 768px){
+
+.marcador{
+	background: #fe9d9d;
+	border:1px solid #f94646;
+}
+
+.marcador2{
+	background: #5bf946;
+	border:1px solid #36ae26;
+}
+
+.topicos{
+	padding: 0px 40px;
+	font-size: 24px;
+	float: left;
+	margin-top: 12px;
+}
+
+#fundo{
+	background-color:white;
+}
+
+.table-color{
+	background-color: #f0f0f0;
+	font-size: 12px;
+	border-radius: 20px 20px 10px 10px;
+	box-shadow: 0px 4px #f5f5f5;
+	margin-bottom: 4px;
+}
+
+.pracima{
+margin-top: -100px;
+}
+
+.calendar{
+	width: 60px;
+	height: 60px;
+	font-size: 12px;
+	vertical-align: middle;
+}
+
+th{
+	min-width: 10px;
+	text-align: center;
+}
+
+.display-table{
+	display: table;
+	table-layout: fixed;
+}
+
+.display-cell{
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.progress-bar{
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	color:#fff;
+	text-align:center;
+	white-space:nowrap;
+	background-color: #31708f;
+	transition:width 0.6s ease;
+}
+
+.btn-action{
+	margin-bottom: 15px;
+	margin-top: 10px;
+	padding: 10px 5px;
+	box-shadow: 0px 4px #f5f5f5;
+}
+
+.btn-action:hover,
+.btn-action:focus,
+.btn-action:active{
+	background-color: lightblue;
+	box-shadow: 0px 4px #f5f5f5;
+}
+
+.btn-advance{
+	background-color: darkgreen;
+	color: white;
+	border-radius: 10px;
+}
+
+.btn-advance:hover,
+.btn-advance:focus,
+.btn-advance:active{
+	background-color: green;
+	color: white;
+}
+
+h4{
+	margin-top: 8px;
+	margin-bottom: none;
+	padding-bottom: none;
+}
+
+/*.progress-bar{
+	background-color: lightblue;
+}*/
+
+.activity{
+	background-color: lightblue;
+}
+
+.progress{
+	margin-bottom: 6px;
+	margin-top: 6px;
+	height: 15px
+}
+
+.navbar,
+.navbar-default {
+	margin-bottom: 0px;
+	margin-left: 0px;
+}
+
+.th-row{
+	border-radius: 20px 20px 0px 0px;
+}
+
+.prog-row{
+
+	background-color: #fff;
+	border: 1px solid lightgrey;
+	border-radius: 5px 5px;
+	padding: 1px 6px;
+	margin-bottom: 6px;
+	box-shadow: 0px 4px #f5f5f5;
+	margin-top: 6px;
+
+}
+.popover-header {
+    padding:8px 14px;
+    background-color:#f7f7f7;
+    border-bottom:1px solid #ebebeb;
+    -webkit-border-radius:5px 5px 0 0;
+    -moz-border-radius:5px 5px 0 0;
+    border-radius:5px 5px 0 0;
+    font-weight: bolder;
+    box-sizing: 20px;
+}
+.popover-title {
+    margin:0;
+    padding:0;
+    background-color:transparent;
+    border:none;
+    font-weight:bold
+}
+.example-popovers {
+    padding:30px 0;
+}
+.acenter {
+    text-align:center;
+    margin:30px 0;
+}
+
+html, body{
+	overflow: auto;
+	height: 100%;
+}
+
+.actions{
+	overflow-y: scroll;
+    height: 140px;
+}
+
+
+/* Media Queries */
+
+@media screen and (max-width: 767px){
+	h1 {
+		font-size: 50px;
+	}
+	.btn {
+		margin: 10px 15px;
+	}
+}
+
+#entrar{
+	padding-right: 50px;
+	margin-right: 10px;
+}
+
+.fensaio{
+ background-image: url('img/sambodromo_ensaio.jpg');
+ opacity: 0.87;
+ background-size: cover;
+ background-repeat: no-repeat;
+
+}
