@@ -1,0 +1,150 @@
+<DOCTYPE html>
+<html>
+  <head>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+    <title>WW Toni</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+        width: 80%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 80%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map" class="col-md-10"></div>
+    <div class="col-md-2" style="background-color: black">
+    <h2>GUERRA DOS TONI</h2>
+    <h3 style="color:grey">lacerda - 2</h3>
+    <h3 style="color:blue">arthur  - 2</h3>
+    <h3 style="color:yellow">beto - 2</h3>
+    <h3 style="color:red" >kradeu - 2</h3>
+    <h3 style="color:green">john - 2</h3>
+    <h3 style="color:white">logato - 2</h3>
+    <h3 style="color:lightgray">grey - 2</h3>
+    <h3 style="color:brown">girafa - 2</h3>
+    <h3 style="color:orange">bloris - 2</h3>
+    <h3 style="color:pink">bruno - 2</h3>
+    <h3 style="color:cyan">pablo - 2</h3>
+    <h3 style="color:purple">be - 2</h3>
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -22.914774,  lng: -43.249742},
+          zoom: 15
+        });
+      // Define the LatLng coordinates for the polygon's path.
+        var triangleCoords = [
+          {lat: -22.911, lng:  -43.237},
+          {lat: -22.914, lng:  -43.234},
+          {lat: -22.918, lng:  -43.243},
+          {lat: -22.920, lng:  -43.260},
+          {lat: -22.915, lng:  -43.262},
+          {lat: -22.910, lng:  -43.258}
+        ];
+
+        // [-43.234, -22.912], [-43.24, -22.912], [-43.234, -22.91], [-43.24, -22.91]
+        var terr0=[{lat:-22.911, lng: -43.267},{lat:-22.909, lng: -43.261},{lat:-22.914, lng: -43.263},{lat:-22.914, lng: -43.267}];
+var terr1=[{lat:-22.909, lng: -43.261},{lat:-22.911, lng: -43.259},{lat:-22.912, lng: -43.257},{lat:-22.914, lng: -43.263}];
+var terr2=[{lat:-22.911, lng: -43.259},{lat:-22.911, lng: -43.255},{lat:-22.914, lng: -43.255},{lat:-22.912, lng: -43.257}];
+var terr3=[{lat:-22.911, lng: -43.255},{lat:-22.909, lng: -43.249},{lat:-22.913, lng: -43.250},{lat:-22.914, lng: -43.255}];
+var terr4=[{lat:-22.909, lng: -43.249},{lat:-22.911, lng: -43.247},{lat:-22.914, lng: -43.247},{lat:-22.913, lng: -43.250}];
+var terr5=[{lat:-22.911, lng: -43.247},{lat:-22.909, lng: -43.241},{lat:-22.912, lng: -43.241},{lat:-22.914, lng: -43.247}];
+var terr6=[{lat:-22.909, lng: -43.241},{lat:-22.910, lng: -43.238},{lat:-22.914, lng: -43.239},{lat:-22.912, lng: -43.241}];
+var terr7=[{lat:-22.910, lng: -43.238},{lat:-22.911, lng: -43.235},{lat:-22.914, lng: -43.235},{lat:-22.914, lng: -43.239}];
+// var terr8=[{lat:-22.911, lng: -43.235},{lat:-22.914, lng: -43.267},{lat:-22.916, lng: -43.266},{lat:-22.914, lng: -43.235}];
+var terr9=[{lat:-22.914, lng: -43.267},{lat:-22.914, lng: -43.263},{lat:-22.917, lng: -43.263},{lat:-22.916, lng: -43.266}];
+var terr10=[{lat:-22.914, lng: -43.263},{lat:-22.912, lng: -43.257},{lat:-22.915, lng: -43.257},{lat:-22.917, lng: -43.263}];
+var terr11=[{lat:-22.912, lng: -43.257},{lat:-22.914, lng: -43.255},{lat:-22.917, lng: -43.255},{lat:-22.915, lng: -43.257}];
+var terr12=[{lat:-22.914, lng: -43.255},{lat:-22.913, lng: -43.250},{lat:-22.917, lng: -43.251},{lat:-22.917, lng: -43.255}];
+var terr13=[{lat:-22.913, lng: -43.250},{lat:-22.914, lng: -43.247},{lat:-22.917, lng: -43.247},{lat:-22.917, lng: -43.251}];
+var terr14=[{lat:-22.914, lng: -43.247},{lat:-22.912, lng: -43.241},{lat:-22.916, lng: -43.242},{lat:-22.917, lng: -43.247}];
+var terr15=[{lat:-22.912, lng: -43.241},{lat:-22.914, lng: -43.239},{lat:-22.916, lng: -43.238},{lat:-22.916, lng: -43.242}];
+var terr16=[{lat:-22.914, lng: -43.239},{lat:-22.914, lng: -43.235},{lat:-22.915, lng: -43.233},{lat:-22.916, lng: -43.238}];
+var terr17=[{lat:-22.914, lng: -43.235},{lat:-22.916, lng: -43.266},{lat:-22.919, lng: -43.266},{lat:-22.915, lng: -43.233}];
+var terr18=[{lat:-22.916, lng: -43.266},{lat:-22.917, lng: -43.263},{lat:-22.919, lng: -43.262},{lat:-22.919, lng: -43.266}];
+var terr19=[{lat:-22.917, lng: -43.263},{lat:-22.915, lng: -43.257},{lat:-22.920, lng: -43.259},{lat:-22.919, lng: -43.262}];
+var terr20=[{lat:-22.915, lng: -43.257},{lat:-22.917, lng: -43.255},{lat:-22.918, lng: -43.253},{lat:-22.920, lng: -43.259}];
+var terr21=[{lat:-22.917, lng: -43.255},{lat:-22.917, lng: -43.251},{lat:-22.920, lng: -43.251},{lat:-22.918, lng: -43.253}];
+var terr22=[{lat:-22.917, lng: -43.251},{lat:-22.917, lng: -43.247},{lat:-22.919, lng: -43.246},{lat:-22.920, lng: -43.251}];
+var terr23=[{lat:-22.917, lng: -43.247},{lat:-22.916, lng: -43.242},{lat:-22.920, lng: -43.243},{lat:-22.919, lng: -43.246}];
+var terr24=[{lat:-22.916, lng: -43.242},{lat:-22.916, lng: -43.238},{lat:-22.919, lng: -43.237},{lat:-22.920, lng: -43.243}];
+var terr25=[{lat:-22.916, lng: -43.238},{lat:-22.915, lng: -43.233},{lat:-22.920, lng: -43.233},{lat:-22.919, lng: -43.237}];
+        // Construct the polygon.
+        var t0 = new google.maps.Polygon({paths:terr0,strokeColor: 'blue',strokeOpacity: 0.2,strokeWeight: 2,fillColor: 'gray',fillOpacity: 0.3});
+        var t1 = new google.maps.Polygon({paths:terr1,strokeColor: 'blue',strokeOpacity: 0.2,strokeWeight: 2,fillColor: 'gray',fillOpacity: 0.3});
+        var t2 = new google.maps.Polygon({paths:terr2,strokeColor: 'blue',strokeOpacity: 0.2,strokeWeight: 2,fillColor: 'blue',fillOpacity: 0.3});
+        var t3 = new google.maps.Polygon({paths:terr3,strokeColor: 'blue',strokeOpacity: 0.2,strokeWeight: 2,fillColor: 'blue',fillOpacity: 0.3});
+        var t4 = new google.maps.Polygon({paths:terr4,strokeColor: 'blue',strokeOpacity: 0.2,strokeWeight: 2,fillColor: 'yellow',fillOpacity: 0.3});
+        var t5 = new google.maps.Polygon({paths:terr5,strokeColor: 'blue',strokeOpacity: 0.2,strokeWeight: 2,fillColor: 'yellow',fillOpacity: 0.3});
+        var t6 = new google.maps.Polygon({paths:terr6,strokeColor: 'blue',strokeOpacity: 0.2,strokeWeight: 2,fillColor: 'red',fillOpacity: 0.3});
+        var t7 = new google.maps.Polygon({paths:terr7,strokeColor: 'blue',strokeOpacity: 0.2,strokeWeight: 2,fillColor: 'red',fillOpacity: 0.3});
+        // var t8 = new google.maps.Polygon({paths:terr8,strokeColor: 'blue',strokeOpacity: 0.2,strokeWeight: 2,fillColor: 'gray',fillOpacity: 0.3});
+        var t9 = new google.maps.Polygon({paths:terr9,strokeColor: 'blue',strokeOpacity: 0.2,strokeWeight: 2,fillColor: 'green',fillOpacity: 0.3});
+        var t10 = new google.maps.Polygon({paths:terr10,strokeColor: 'blue',strokeOpacity: 0.2,strokeWeight: 2,fillColor: 'green',fillOpacity: 0.3});
+        var t11 = new google.maps.Polygon({paths:terr11,strokeColor: 'blue',strokeOpacity: 0.2,strokeWeight: 2,fillColor: 'white',fillOpacity: 0.3});
+        var t12 = new google.maps.Polygon({paths:terr12,strokeColor: 'blue',strokeOpacity: 0.2,strokeWeight: 2,fillColor: 'white',fillOpacity: 0.3});
+        var t13 = new google.maps.Polygon({paths:terr13,strokeColor: 'blue',strokeOpacity: 0.2,strokeWeight: 2,fillColor: 'black',fillOpacity: 0.3});
+        var t14 = new google.maps.Polygon({paths:terr14,strokeColor: 'blue',strokeOpacity: 0.2,strokeWeight: 2,fillColor: 'black',fillOpacity: 0.3});
+        var t15 = new google.maps.Polygon({paths:terr15,strokeColor: 'blue',strokeOpacity: 0.2,strokeWeight: 2,fillColor: 'brown',fillOpacity: 0.3});
+        var t16 = new google.maps.Polygon({paths:terr16,strokeColor: 'blue',strokeOpacity: 0.2,strokeWeight: 2,fillColor: 'brown',fillOpacity: 0.3});
+        // var t17 = new google.maps.Polygon({paths:terr17,strokeColor: 'blue',strokeOpacity: 0.2,strokeWeight: 2,fillColor: 'gray',fillOpacity: 0.3});
+        var t18 = new google.maps.Polygon({paths:terr18,strokeColor: 'blue',strokeOpacity: 0.2,strokeWeight: 2,fillColor: 'orange',fillOpacity: 0.3});
+        var t19 = new google.maps.Polygon({paths:terr19,strokeColor: 'blue',strokeOpacity: 0.2,strokeWeight: 2,fillColor: 'orange',fillOpacity: 0.3});
+        var t20 = new google.maps.Polygon({paths:terr20,strokeColor: 'blue',strokeOpacity: 0.2,strokeWeight: 2,fillColor: 'pink',fillOpacity: 0.3});
+        var t21 = new google.maps.Polygon({paths:terr21,strokeColor: 'blue',strokeOpacity: 0.2,strokeWeight: 2,fillColor: 'pink',fillOpacity: 0.3});
+        var t22 = new google.maps.Polygon({paths:terr22,strokeColor: 'blue',strokeOpacity: 0.2,strokeWeight: 2,fillColor: 'cyan',fillOpacity: 0.3});
+        var t23 = new google.maps.Polygon({paths:terr23,strokeColor: 'blue',strokeOpacity: 0.2,strokeWeight: 2,fillColor: 'cyan',fillOpacity: 0.3});
+        var t24 = new google.maps.Polygon({paths:terr24,strokeColor: 'blue',strokeOpacity: 0.2,strokeWeight: 2,fillColor: 'purple',fillOpacity: 0.3});
+        var t25 = new google.maps.Polygon({paths:terr25,strokeColor: 'blue',strokeOpacity: 0.2,strokeWeight: 2,fillColor: 'purple',fillOpacity: 0.3});
+        t1.setMap(map);
+        t0.setMap(map);
+        t2.setMap(map);
+        t3.setMap(map);
+        t4.setMap(map);
+        t5.setMap(map);
+        t6.setMap(map);
+        t7.setMap(map);
+        // t8.setMap(map);
+        t9.setMap(map);
+        t10.setMap(map);
+        t11.setMap(map);
+        t12.setMap(map);
+        t13.setMap(map);
+        t14.setMap(map);
+        t15.setMap(map);
+        t16.setMap(map);
+        // t17.setMap(map);
+        t18.setMap(map);
+        t19.setMap(map);
+        t20.setMap(map);
+        t21.setMap(map);
+        t22.setMap(map);
+        t23.setMap(map);
+        t24.setMap(map);
+        t25.setMap(map);
+        var myLatlng = new google.maps.LatLng(-22.914, -43.247);
+        var mapLabel = new MapLabel({
+          text: 'Toni',
+          position: myLatlng,
+          map: map,
+          fontSize: 20,
+          align: 'left'
+        });
+        mapLabel.set('position', myLatlng);
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKcYQ2LlOZYPn8C42rUYRE4T_y9OZrGpM&callback=initMap" async defer></script>
+  </body>
+</html>
