@@ -90,44 +90,7 @@ for k,v in game.items():
 	for x in v:
 			g[str(x)]=initial_pos[k]
 
-# print(g)
-
-# sorteando o terr que irá atacar
-atack = random.choice(t)
-at = str(atack)
-print('terr que atacará')
-print(at)
-gat = g[at]
-print(gat)
-
-
-# sorteando o território para ser derrotado. Precisa estar a 1 unidade de distancia,e não pode ser do mesmo owner
-dx=3
-dy=3
-dt=2
-i = 0
-
-while dt>1:
-	i+=1
-	target = random.choice(t)
-	df = str(target)
-	gdf = g[df]
-	if gat == gdf:
-		# print('não pode atacar a si próprio')
-		continue
-	dx = (atack[0]-target[0])
-	dy = (atack[1]-target[1])
-	dt = abs(dx)+abs(dy)
-
-
-print('tentativa'+str(i))
-print(target)
-print(gdf)
-
-g[df]=g[at]
-
 print(g)
-
 
 
 
