@@ -2,6 +2,7 @@ from app import db
 from sqlalchemy.dialects.postgresql import JSON
 import os
 
+
 class Terr(db.Model):
     __tablename__ = 'terr'
 
@@ -27,3 +28,29 @@ class Terr(db.Model):
             'owner': self.owner,
             'position':self.position
         }
+
+class Owners(db.Model):
+    __tablename__ = 'Owners'
+
+    id = db.Column(db.Integer, primary_key=True)
+    owner = db.Column(db.String())
+    color = db.Column(db.String())
+    quant = db.Column(db.Integer())
+    # result_all = db.Column(JSON)
+
+
+    def __init__(self, owner, color, quant):
+        self.owner = owner
+        self.color = color
+        self.quant = quant
+
+    def __repr__(self):
+        return '<id {}>'.format(self.owner)
+    
+    def serialize(self):
+        return {
+            'id': self.id, 
+            'owner': self.owner,
+            'color': self.color,
+            'quant':self.quant
+        }    
