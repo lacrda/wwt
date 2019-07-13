@@ -4,7 +4,7 @@ import random
 # criando o mapa do jogo
 t=[]  
 s=[]
-for i in range(1,3):
+for i in range(1,4):
 	for j in range(1,9):
 		t.append([i,j])
 # t.append(s)
@@ -47,7 +47,7 @@ colors = {
 'kradeu': 'red',
 'john': 'green',
 'logato': 'white',
-'grey': 'black',
+'grey': 'olive',
 'girafa': 'brown',
 'bloris': 'orange',
 'bruno': 'pink',
@@ -59,54 +59,12 @@ g = dict()
 
 for k,v in game.items():
 	for x in v:
-			g[str(x)]=initial_pos[k]
-
-# sorteando o terr que irá atacar
-atack = random.choice(t)
-at = str(atack)
-# print('terr que atacará')
-# print(at)
-gat = g[at]
-# print(gat)
-
-dx=3
-dy=3
-dt=2
-i = 0
-
-while dt>1:
-	i+=1
-	target = random.choice(t)
-	df = str(target)
-	gdf = g[df]
-	if gat == gdf:
-		# print('não pode atacar a si próprio')
-		continue
-	dx = (atack[0]-target[0])
-	dy = (atack[1]-target[1])
-	dt = abs(dx)+abs(dy)
-
-
-# print('tentativa'+str(i))
-# print(target)
-# print(gdf)
-
-g[df]=g[at]
+			g[str(x)]=[initial_pos[k],colors[initial_pos[k]]]
 
 def return_g():
 	return g
 
-
+def return_colors():
+	return colors
 a = return_g()
 print(a)
-# from models import Owners
-# import app
-# from flask import Flask, render_template, jsonify
-# from flask_sqlalchemy import SQLAlchemy
-# from sqlalchemy import create_engine, func
-# # Salvar no db na tabela Terr os terr com posições e owner
-# lacerda = Owners('lacerda', colors['lacerda'],2)
-# db = SQLAlchemy(app)
-# db.session.add(lacerda)
-# db.session.commit()
-

@@ -1,7 +1,10 @@
 from flask_script import Manager
 from flask_migrate import Migrate, MigrateCommand
-
+import os
 from app import app, db
+from models import Terr, Owners
+
+app.config.from_object(os.environ['APP_SETTINGS'])
 
 migrate = Migrate(app, db)
 manager = Manager(app)

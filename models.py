@@ -10,13 +10,15 @@ class Terr(db.Model):
     name = db.Column(db.String())
     owner = db.Column(db.String())
     position = db.Column(db.String())
+    color = db.Column(db.String())
     # result_all = db.Column(JSON)
 
 
-    def __init__(self, name, owner, position):
+    def __init__(self, name, owner, position, color):
         self.name = name
         self.owner = owner
         self.position = position
+        self.color = color
 
     def __repr__(self):
         return '<id {}>'.format(self.name)
@@ -26,11 +28,12 @@ class Terr(db.Model):
             'id': self.id, 
             'name': self.name,
             'owner': self.owner,
-            'position':self.position
+            'position':self.position,
+            'color': self.color
         }
 
 class Owners(db.Model):
-    __tablename__ = 'Owners'
+    __tablename__ = 'owners'
 
     id = db.Column(db.Integer, primary_key=True)
     owner = db.Column(db.String())
